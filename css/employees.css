@@ -1,0 +1,465 @@
+#navegationEmployee{
+  background-color: rgba(27, 38, 59, 1);
+  color: rgb(255, 255, 255);
+}
+#navegationEmployee img {
+  filter: brightness(0) invert(1);
+}
+
+#title-navegation a {
+  text-decoration: none;
+  color: rgb(69, 69, 69);
+}
+#title-navegation a:hover {
+  color: black;
+}
+#mainContent {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border: solid 1px grey;
+  border-radius: 10px; /* remova depois */
+  margin-top: 50px;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.filter-space {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  box-sizing: border-box;
+  /* border: solid 1px red; */
+  gap: 10px; /* Espaçamento entre os elementos */
+  width: 100%;
+  align-items: center;
+}
+.filter-actions {
+  /* border: solid 1px black; */
+  display: flex;
+  gap: 10px; /* Espaçamento entre o link e o botão */
+}
+.filter-space input {
+  flex-grow: 1;
+  border: solid 1px grey;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+
+  
+
+  background-color: rgba(224, 225, 221, 1);
+  padding-left: 30px;
+  background-image: url("../assets/icons/Vector.svg");
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  background-size: 16px;
+}
+.filter-space a {
+  text-decoration: none;
+  background-color: rgba(61, 84, 112, 1);
+  color: white;
+  padding: 5px 8px 5px 30px;
+  border-radius: 5px;
+  border: solid 1px grey;
+
+  background-image: url("../img/plus_white.png");
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  background-size: 20px;
+  
+}
+.filter-space a:hover{
+  background-color: rgb(27, 38, 59, 1);
+}
+.filter-space button {
+  /* border: solid 1px grey; */
+  
+  border-radius: 5px;
+  border: solid 1px;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+
+  padding-left: 30px;
+  background-image: url("../assets/icons/iconeFiltros.png");
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  background-size: 16px;
+
+}
+.filter-space button:hover{
+  background-color: rgb(61, 84, 112, 0.5);
+}
+#showFilters-space{
+  display: none;
+  justify-content: left;
+  padding: 5px;
+  box-sizing: border-box;
+  /* border: solid 1px red;  */
+  gap: 10px; /* Espaçamento entre os elementos */
+  width: 100%;
+  align-items: center;
+  
+}
+#showFilters-space.show{
+  display: flex;
+}
+#showFilters-space button{
+  border-radius: 5px;
+  border: solid 1px;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+#showFilters-space button:hover{
+  background-color: rgb(61, 84, 112, 0.5);
+}
+#showFilters-space select{
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: rgba(224, 225, 221, 1);
+}
+.table-space {
+  /* border: solid 1px red; */
+  padding: 20px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table tbody tr {
+  border-bottom: solid 1px grey;
+
+}
+
+.table td,
+th {
+  /* background-color: rgba(224, 225, 221, 1); */
+  padding: 5px;
+  align-items: center;
+  text-align: center;
+}
+
+.table tbody tr:hover{
+  background-color: rgb(159, 159, 159);
+}
+.profile-pic{
+  display: flex;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: solid 2px grey;
+}
+.actions img {
+  width: 30px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.actions img:hover{
+  opacity: 1;
+}
+/* flex box: empurrar a div results para baixo:flex: 1 */
+.flex-space {
+  flex: 1;
+  /* border: solid 1px; */
+}
+/* results space */
+#resultsSpace {
+  /* border: solid 1px yellow; */
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: auto;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.results {
+  /* border: solid 1px red; */
+  display: flex;
+  align-items: center;
+}
+.amount div {
+  display: flex;
+  padding: 0px 5px 0px 5px;
+  gap: 3px;
+  margin-left: 5px;
+}
+.amount select{
+  background-color: rgba(224, 225, 221, 1);
+  border-radius: 3px;
+}
+.results img {
+  width: 30px;
+  min-height: 30px;
+}
+.next {
+  gap: 5px;
+}
+.next a {
+  padding: 0px 10px 0px 10px;
+}
+.numbers {
+  border: solid 1px grey;
+  border-radius: 5px;
+  text-decoration: none;
+  color: inherit;
+}
+.numbers:hover {
+  background-color: grey;
+}
+/* Inicio Modal */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 0 auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Fim Modal */
+
+/* Estilos gerais do conteudo do modal*/
+/* Estilos para as seções */
+.form-section {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.section-title {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(61, 84, 112, 1)
+}
+
+
+/* Layout para grupos de campos */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.form-group {
+  flex: 1 0 200px;
+  margin: 0 10px 15px;
+}
+
+/* Estilos para os campos e labels */
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: rgba(27, 38, 59, 1)
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: border-color 0.2s;
+}
+
+.form-control:hover {
+  border-color: rgba(119, 141, 169, 1);
+  outline: none;
+}
+
+.form-control:disabled {
+  background-color: #f5f5f5;
+  cursor: auto;
+}
+
+
+/* Preview de imagem */
+.image-preview {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  border: 1px dashed #ccc;
+}
+
+.image-preview img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 4px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+  body{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-space {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-actions {
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+  
+  #showFilters-space {
+    flex-direction: column;
+  }
+  
+  #showFilters-space > div {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .showFilters-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .showFilters-actions select {
+    width: 100%;
+  }
+  .form-group {
+      flex: 1 0 100%;
+      margin-bottom: 12px;
+  }
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .form-section {
+    padding: 15px 10px;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+}
+/* Extra small screens */
+@media screen and (max-width: 425px) {
+  #conteinerLeft a:nth-child(2) {
+    display: none; /* Hide logo on very small screens */
+  }
+  
+  #conteinerRight {
+    gap: 5px;
+  }
+  
+  #userContainer img, #notifContainer img, #modesContainer img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Modal adjustments for very small screens */
+  .modal-content {
+    padding: 10px;
+  }
+  
+  .form-group {
+    margin: 0 5px 12px;
+  }
+  
+  .form-control {
+    padding: 8px;
+  }
+  
+  .close {
+    font-size: 30px;
+  }
+  
+  /* Make main content padding smaller */
+  #mainContent {
+    padding: 15px;
+    margin-top: 30px;
+  }
+}
+/* Very small screens */
+@media screen and (max-width: 320px) {
+  .filter-space input {
+    padding: 8px;
+    padding-left: 25px;
+    font-size: 16px;
+    background-size: 14px;
+  }
+  
+  .filter-space a, .filter-space button {
+    font-size: 14px;
+    padding: 4px;
+  }
+  
+  #showFilters-space button, #showFilters-space select {
+    font-size: 14px;
+    padding: 4px;
+  }
+  
+  .form-label {
+    font-size: 14px;
+  }
+  
+  .form-control {
+    font-size: 14px;
+  }
+  
+  .section-title {
+    font-size: 1rem;
+  }
+}
+

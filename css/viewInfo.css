@@ -1,0 +1,20 @@
+.table_point_management {
+  margin-left: 0px;
+}
+
+thead {
+  text-align: left;
+}
+
+.subtitle_naveation {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+#titulo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}

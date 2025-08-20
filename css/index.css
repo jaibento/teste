@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    background-color: #E0E1DD;
+}
+
+.cabecalho {
+    background-color: #1B263B;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.cabecalho-imagem {
+    height: 60px;
+}
+
+.cabelho-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.cabecalho-botao-login {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #3D5470;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+}
+
+.cabecalho-botao-login:hover {
+    background-color: #69819c;
+}
+
+.cabecalho-menu-item {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.cabecalho-menu-item:hover {
+    color: #69819c;
+}
+
+.conteudo {
+    background-color: #E0E1DD;
+    margin-bottom: 24px;
+    padding: 20px 50px 0px 80px;
+    width: 100%;
+}
+
+.conteudo-principal {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 20px;
+
+}
+
+.conteudo-principal-escrito {
+    display: flex;
+    flex: 1;
+    min-width: 300px;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+    width: 100%;
+}
+
+.conteudo-principal-escrito-titulo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: clamp(22px, 4vw, 30px);
+    font-style: normal;
+    color: #1B263B;
+}
+
+.conteudo-principal-escrito-subtitulo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: clamp(16px, 3vw, 20px);
+    font-style: normal;
+}
+
+.conteudo-principal-escrito-botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 44px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1B263B;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    transition: background-color 0.3s;
+}
+
+.conteudo-principal-escrito-botao:hover {
+    background-color: #3D5470;
+}
+
+.conteudo-principal-imagem {
+    max-width: 100%;
+    height: auto;
+    max-height: 330px;
+    object-fit: contain;
+}
+
+.conteudo-motivos, .conteudo-funcoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 40px;
+    margin-top: 40px;
+    padding: 20px 10px;
+}
+
+.conteudo-motivos-titulos, .conteudo-funcoes-titulo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: clamp(20px, 3vw, 24px);
+    color: #1B263B;
+}
+
+/* Cards Motivos */
+.flip-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: transparent;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 15px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 #778DA9;
+    border-radius: 10px;
+    
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    
+    
+}
+
+.flip-card-front {
+    background-color: #1B263B;
+    color:white;
+    border-radius: 10px;
+
+    
+}
+
+.flip-card-back {
+    background-color: #3D5470;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+
+.conteudo-motivos-paragrafo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: clamp(12px, 2vw, 16px);
+    text-align: center;
+}
+
+.flip-card-back p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: clamp(12px, 2vw, 16px);
+    text-align: center; 
+}
+
+.conteudo-perguntas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.conteudo-perguntas-titulo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: clamp(20px, 3vw, 24px);
+    color: #1B263B;
+    margin-bottom: 15px;
+}
+
+.conteudo-perguntas-paragrafo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: clamp(14px, 2vw, 16px);
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.rodape {
+    background-color: #1B263B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.rodape-paragrafo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: clamp(10px, 2vw, 12px);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.rodape-imagem {
+    height: 28px;
+    margin-top: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .cabecalho {
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .cabecalho-imagem {
+        margin-bottom: 10px;
+    }
+    
+    .cabelho-menu {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .conteudo-principal {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .conteudo-principal-escrito {
+        align-items: center;
+        min-width:100%;
+    }
+    
+    .flip-card {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cabecalho-menu-item {
+        font-size: 14px;
+    }
+    
+    .cabecalho-botao-login {
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    .conteudo {
+        padding: 15px 10px;
+    }
+    
+    .flip-card {
+        width: 140px;
+        height: 140px;
+    }
+}
