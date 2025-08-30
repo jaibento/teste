@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <script type="text/javascript" src="./js/script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div id="conteinerLeft">
+        <a href="#">
+          <!--<button id="showlateral" onclick="toggleSidebar()">>></button> -->
+          <div id="hide">
+            <img
+              src="./img/menu_white.png"
+              alt="logo"
+              id="showlateral"
+              onclick="toggleSidebar()"
+            />
+          </div>
+        </a>
+        <a href="">
+          <img src="./img/logo.png" alt="logo" id="logo" />
+        </a>
+      </div>
+      <div id="conteinerRight">
+        <!-- <div id="searchContainer">
+          <input id="search" type="text" placeholder="Pesquisar..." />
+        </div>
+         -->
+        <a href="#"
+          ><div id="modesContainer">
+            <img src="./img/moon_white.png" alt="mode" /></div
+        ></a>
+        <a href="#"
+          ><div id="notifContainer">
+            <img src="./img/notification_white.png" alt="notification" /></div
+        ></a>
+        <a href="#" id="userContainerLink">
+          <div id="userContainer" onclick="menuToggle()">
+            <img src="./img/user_white.png" alt="userimage" />
+          </div>
+          <div id="userMenu">
+            <h3>Nome do usuario<br /><span>Cargo</span></h3>
+            <ul>
+              <li>
+                <a href="#"
+                  ><div>
+                    <img src="./img/user_black.png" alt="usericon" />Perfil
+                  </div></a
+                >
+              </li>
+
+              <li>
+                <a href="#"
+                  ><div>
+                    <img src="./img/out_black.png" alt="logouticon" />Sair
+                  </div></a
+                >
+              </li>
+            </ul>
+          </div>
+        </a>
+      </div>
+    </nav>
+    <aside id="sidebar">
+      <div class="lateral">
+        <div id="lateralTop">
+          <a href="home.html" class="navegation"
+            ><div id="navegationMain">
+              <img src="./img/board_black.png" alt="board" />Página Inicial
+            </div>
+          </a>
+          <a href="employees.html" class="navegation"
+            ><div id="navegationEmployee">
+              <img src="./img/emplo_black.png" alt="employee" />Colaboradores
+            </div>
+          </a>
+          <a href="pointManagement.html" class="navegation"
+            ><div id="navegationPonto">
+              <img src="./img/ponto_black.png" alt="ponto" />Gestão de Ponto
+            </div>
+          </a>
+          <a href="#" class="navegation"
+            ><div id="navegationBenefits">
+              <img src="./img/benefit_back.png" alt="benefits" />Gestão de
+              Benefícios
+            </div>
+          </a>
+          <a href="payroll.html" class="navegation"
+            ><div id="navegationPayment">
+              <img src="./img/pay_black.png" alt="payment" />Folha de pagamento
+            </div>
+          </a>
+        </div>
+        <div id="lateralbotton">
+          <a href="#" class="navegation"
+            ><div id="navegationConfig">
+              <img src="./img/config_black.png" alt="config icon" />Configurações
+            </div>
+          </a>
+          <a href="#" class="navegation"
+            ><div id="navegationSuport">
+              <img src="./img/suport_black.png" alt="suport icon" />Suporte
+            </div>
+          </a>
+          <a href="about.html" class="navegation"
+            ><div id="navegationAbout"><img src="./img/about_black.png" alt="about icon" />Sobre</div>
+          </a>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <div class="main">
+        <section id="about">
+          <h3>Sobre a equipe</h3>
+          <p>Conheça um pouco mais do projeto e da equipe de desenvolvimento</p>
+        </section>
+        <section id="info">
+          <div id="ufca">
+            <img src="./img/ufca.png" alt="logo Ufca">
+            <span><p>UNIVERSIDADE <br>FEDERAL DO CARIRI</p></span>
+          </div>
+          <p>
+            <b>ANÁLISE E DESENVOLVIMENTO DE SISTEMAS (ADS)</b> <br />
+            <b>CURSO:</b>| ADS0015 | DESENVOLVIMENTO PARA WEB (2024.2) <br />
+            <b>CENÁRIO:</b>RECURSOS HUMANOS DE UMA EMPRESA DE PEQUENO PORTE
+          </p>
+          <br />
+          
+        </section>
+        <div id="nameEquipe"><p><b>EQUIPE</b></p></div>
+        <section id="team">
+          
+          <div class="members">
+            <p class="name">Lucas Araujo</p>
+            <br>
+            <p class="mat">
+              Matrícula:2023011063 <br>
+              Email:lucas.araujo@aluno.ufca.edu.br <br>
+              GitHub:<a href="https://github.com/lal28">lal28</a>
+            </p>
+          </div>
+          <div class="members">
+            <p class="name">Maria Mikaelle</p>
+            <br>
+            <p class="mat">
+              Matrícula:2023011448<br>
+              Email:mikaelle.andrade@aluno.ufca.edu.br<br>
+              GitHub:<a href="https://github.com/Mikaelle27">Mikaelle27</a>
+            </p>
+          </div>
+          <div class="members">
+            <p class="name">Pedro Henrique</p>
+            <br>
+            <p class="mat">
+              Matrícula:2023010244<br>
+              Email:pedro.nogueira@aluno.ufca.edu.br<br>
+              GitHub:<a href="https://github.com/Pedro9185">Pedro9185</a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div><p>Sistema Rh TopRh nenhum direito reservado</p></div>
+    </footer>
+  </body>
+</html>

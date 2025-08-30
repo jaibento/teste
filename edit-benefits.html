@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/edit_benefits.css" />
+    <!-- <script type="text/javascript" src="./js/script.js" defer></script>  DESATIVADO PARA NÂO PRECISAR SE LOGAR, LEMBRE DE DESCOMENTAR-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+
+    <title>Sistema RH - TopRH</title>
+</head>
+
+<body>
+    <nav>
+        <div id="conteinerLeft">
+            <a href="#">
+                <div id="hide">
+                    <img src="./img/menu_white.png" alt="logo" id="showlateral" onclick="toggleSidebar()" />
+                </div>
+            </a>
+            <a href="">
+                <img src="./img/logo.png" alt="logo" id="logo" />
+            </a>
+        </div>
+        <div id="conteinerRight">
+
+            <!-- <div id="searchContainer">
+          <input id="search" type="text" placeholder="Pesquisar..." />
+        </div>
+         -->
+            <a href="#">
+                <div id="modesContainer">
+                    <img src="./img/moon_white.png" alt="mode" />
+                </div>
+            </a>
+            <a href="#">
+                <div id="notifContainer">
+                    <img src="./img/notification_white.png" alt="notification" />
+                </div>
+            </a>
+            <a href="#" id="userContainerLink">
+                <div id="userContainer" onclick="menuToggle()"><img src="./img/user_white.png" alt="userimage" /></div>
+                <div id="userMenu">
+
+                    <h3>Nome do usuario<br /><span>Cargo</span></h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div><img src="./img/user_black.png" alt="usericon" />Perfil</div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <div><img src="./img/out_black.png" alt="logouticon" />Sair</div>
+                            </a>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </a>
+
+
+        </div>
+    </nav>
+    <aside id="sidebar">
+        <div class="lateral">
+            <div id="lateralTop">
+                <a href="login.html" class="navegation">
+                    <div id="navegationMain">
+                        <img src="./img/board_black.png" alt="board" />Página Inicial
+                    </div>
+                </a>
+                <a href="#" class="navegation">
+                    <div id="navegationEmployee">
+                        <img src="./img/emplo_black.png" alt="employee" />Colaboradores
+                    </div>
+                </a>
+                <a href="#" class="navegation">
+                    <div id="navegationPonto">
+                        <img src="./img/ponto_black.png" alt="ponto" />Gestão de Ponto
+                    </div>
+                </a>
+                <a href="#" class="navegation">
+                    <div id="navegationBenefits">
+                        <img src="./img/benefit_back.png" alt="benefits" />Gestão de
+                        Benefícios
+                    </div>
+                </a>
+                <a href="#" class="navegation">
+                    <div id="navegationPayment">
+                        <img src="./img/pay_black.png" alt="payment" />Folha de pagamento
+                    </div>
+                </a>
+            </div>
+            <div id="lateralbotton">
+                <a href="#" class="navegation">
+                    <div id="navegationConfig">
+                        <img src="./img/config_black.png" alt="config icon" />Configurações
+                    </div>
+                </a>
+                <a href="#" class="navegation">
+                    <div id="navegationSuport">
+                        <img src="./img/suport_black.png" alt="suport icon" />Suporte
+                    </div>
+                </a>
+                <a href="about.html" class="navegation">
+                    <div id="navegationAbout"><img src="./img/about_black.png" alt="about icon" />Sobre</div>
+                </a>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <div class="main">
+            <section id="title-navegation">
+
+                <h2> Pedido Refeição e Alimentação</h2>
+                <a href="benefits.html"> Gestão de Benefícios &gt; Pedido Refeição e Alimentação</a>
+
+            </section>
+            <section id="mainContent">
+                <div class="container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>valor</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ana Souza</td>
+                                <td>R$350,00</td>
+                                <td>
+                                    <img id="myBtn" class="icone" src="img/editar_beneficio.png" alt="editar benefício">
+                                    <img  class="icone" src="img/excluir-beneficio.png" alt="visualizar beneficio">   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Carlos Lima</td>
+                                <td>R$250,00</td>
+                                <td>
+                                    <img id="myBtn2" class="icone" src="img/editar_beneficio.png" alt="editar benefício">
+                                    <img  class="icone" src="img/excluir-beneficio.png" alt="visualizar beneficio">   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Fernanda Oliveira</td>
+                                <td>R$500,00</td>
+                                <td>
+                                    <img id="myBtn3" class="icone" src="img/editar_beneficio.png" alt="editar benefício">
+                                    <img  class="icone" src="img/excluir-beneficio.png" alt="visualizar beneficio">   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>João Mendes</td>
+                                <td>R$500,00</td>
+                                <td>
+                                    <img id="myBtn4" class="icone" src="img/editar_beneficio.png" alt="editar benefício">
+                                    <img  class="icone" src="img/excluir-beneficio.png" alt="visualizar beneficio">   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>mariana Duarte</td>
+                                <td>R$500,00</td>
+                                <td>
+                                    <img id="myBtn5" class="icone" src="img/editar_beneficio.png" alt="editar benefício">
+                                    <img  class="icone" src="img/excluir-beneficio.png" alt="visualizar beneficio">   
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- Aqui inicia o modal visualizar benefício -->
+        <!-- Trigger/Open The Modal -->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">   
+                    <h2>Insira o novo valor!</h2>
+                    <input type="text" name="valor">
+                    <button class="close" type="button">OK</button>
+            </div>
+
+        </div>
+        
+    </main>
+    <footer>
+        <div>
+            <p>Sistema Rh TopRh nenhum direito reservado</p>
+        </div>
+    </footer>
+
+<script type="text/javascript" src="./js/edit_benefits.js" defer></script>
+</body>
+
+</html>

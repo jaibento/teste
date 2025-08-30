@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <link rel="stylesheet" href="./css/employees.css" />
+
+  <!-- <script type="text/javascript" src="./js/script.js" defer></script>  DESATIVADO PARA NÂO PRECISAR SE LOGAR, LEMBRE DE DESCOMENTAR-->
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+
+  <title>Sistema RH TopRH-Colaboradores</title>
+</head>
+
+<body>
+  <nav>
+    <div id="conteinerLeft">
+      <a href="#">
+        <div id="hide">
+          <img src="./img/menu_white.png" alt="logo" id="showlateral" onclick="toggleSidebar()" />
+        </div>
+      </a>
+      <a href="">
+        <img src="./img/logo.png" alt="logo" id="logo" />
+      </a>
+    </div>
+    <div id="conteinerRight">
+      <!-- <div id="searchContainer">
+          <input id="search" type="text" placeholder="Pesquisar..." />
+        </div>
+         -->
+      <a href="#">
+        <div id="modesContainer">
+          <img src="./img/moon_white.png" alt="mode" />
+        </div>
+      </a>
+      <a href="#">
+        <div id="notifContainer">
+          <img src="./img/notification_white.png" alt="notification" />
+        </div>
+      </a>
+      <a href="#" id="userContainerLink">
+        <div id="userContainer" onclick="menuToggle()">
+          <img src="./img/user_white.png" alt="userimage" />
+        </div>
+        <div id="userMenu">
+          <h3>Nome do usuario<br /><span>Cargo</span></h3>
+          <ul>
+            <li>
+              <a href="#">
+                <div>
+                  <img src="./img/user_black.png" alt="usericon" />Perfil
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <div>
+                  <img src="./img/out_black.png" alt="logouticon" />Sair
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </a>
+    </div>
+  </nav>
+  <aside id="sidebar">
+    <div class="lateral">
+      <div id="lateralTop">
+        <a href="home.html" class="navegation">
+          <div id="navegationMain">
+            <img src="./img/board_black.png" alt="board" />Página Inicial
+          </div>
+        </a>
+        <a href="#" class="navegation">
+          <div id="navegationEmployee">
+            <img src="./img/emplo_black.png" alt="employee" />Colaboradores
+          </div>
+        </a>
+        <a href="./pointManagement.html" class="navegation">
+          <div id="navegationPonto">
+            <img src="./img/ponto_black.png" alt="ponto" />Gestão de Ponto
+          </div>
+        </a>
+        <a href="./benefits.html" class="navegation">
+          <div id="navegationBenefits">
+            <img src="./img/benefit_back.png" alt="benefits" />Gestão de
+            Benefícios
+          </div>
+        </a>
+        <a href="payroll.html" class="navegation">
+          <div id="navegationPayment">
+            <img src="./img/pay_black.png" alt="payment" />Folha de pagamento
+          </div>
+        </a>
+      </div>
+      <div id="lateralbotton">
+        <a href="#" class="navegation">
+          <div id="navegationConfig">
+            <img src="./img/config_black.png" alt="config icon" />Configurações
+          </div>
+        </a>
+        <a href="#" class="navegation">
+          <div id="navegationSuport">
+            <img src="./img/suport_black.png" alt="suport icon" />Suporte
+          </div>
+        </a>
+        <a href="about.html" class="navegation">
+          <div id="navegationAbout">
+            <img src="./img/about_black.png" alt="about icon" />Sobre
+          </div>
+        </a>
+      </div>
+    </div>
+  </aside>
+  <main>
+    <div class="main">
+      <section id="title-navegation">
+        <a href="#">Colaboradores</a>
+      </section>
+
+      <section id="mainContent">
+        <!-- inicio do conteudo principal -->
+
+        <!--Inicio Modal -->
+        <!-- Trigger/Open The Modal -->
+        <!-- <button id="myBtn">Open Modal</button> -->
+
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <div class="form-section">
+              <!-- Foto do Perfil -->
+              <div class="form-section">
+                <h2 id="section-title-nome" class="section-title"></h2>
+                <div id="modal_imagemPreview" class="image-preview">
+                  <!-- A imagem será inserida aqui pelo JavaScript -->
+                </div>
+              </div>
+
+              <h3 class="section-title">Informações Pessoais</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="modal_nome" class="form-label">Nome Completo</label>
+                  <input type="text" id="modal_nome" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="modal_dataNascimento" class="form-label">Data de Nascimento</label>
+                  <input type="date" id="modal_dataNascimento" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="modal_sexo" class="form-label">Sexo</label>
+                  <input type="text" id="modal_sexo" class="form-control" disabled>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="modal_telefone" class="form-label">Telefone</label>
+                  <input type="tel" id="modal_telefone" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="modal_email" class="form-label">Email Pessoal</label>
+                  <input type="email" id="modal_email" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="modal_estadoCivil" class="form-label">Estado Civil</label>
+                  <input type="text" id="modal_estadoCivil" class="form-control" disabled>
+                </div>
+              </div>
+            </div>
+
+            <!-- Endereço -->
+            <div class="form-section">
+              <h3 class="section-title">Endereço</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="modal_cep" class="form-label">CEP</label>
+                  <input type="text" id="modal_cep" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="modal_endereco" class="form-label">Endereço</label>
+                  <input type="text" id="modal_endereco" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="modal_bairro" class="form-label">Bairro</label>
+                  <input type="text" id="modal_bairro" class="form-control" disabled>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="modal_cidade" class="form-label">Cidade</label>
+                  <input type="text" id="modal_cidade" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="modal_estado" class="form-label">Estado</label>
+                  <input type="text" id="modal_estado" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="modal_pais" class="form-label">País</label>
+                  <input type="text" id="modal_pais" class="form-control" disabled>
+                </div>
+              </div>
+            </div>
+
+            <!-- Informações Profissionais -->
+            <div class="form-section">
+              <h3 class="section-title">Informações Profissionais</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="modal_id" class="form-label">ID</label>
+                  <input type="text" id="modal_id" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="modal_usuario" class="form-label">Usuário</label>
+                  <input type="text" id="modal_usuario" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="modal_departamento" class="form-label">Departamento</label>
+                  <input type="text" id="modal_departamento" class="form-control" disabled>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="modal_emailCorp" class="form-label">Email Corporativo</label>
+                  <input type="email" id="modal_emailCorp" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="modal_ativo" class="form-label">Status</label>
+                  <input type="text" id="modal_ativo" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="modal_dataAdmissao" class="form-label">Data de Admissão</label>
+                  <input type="date" id="modal_dataAdmissao" class="form-control" disabled>
+                </div>
+              </div>
+            </div>
+
+            <!-- Documentos -->
+            <div class="form-section document-section">
+              <h3 class="section-title">Documentos</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="modal_numeroIdentidade" class="form-label">Número da Identidade</label>
+                  <input type="text" id="modal_numeroIdentidade" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="modal_numeroCpf" class="form-label">Número do CPF</label>
+                  <input type="text" id="modal_numeroCpf" class="form-control" disabled>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="modal_identidade" class="form-label">Identidade</label>
+                  <input type="text" id="modal_identidade" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="modal_cpf" class="form-label">CPF</label>
+                  <input type="text" id="modal_cpf" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="modal_comprovanteResidencia" class="form-label">Comp. de Resid.</label>
+                  <input type="text" id="modal_comprovanteResidencia" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="modal_certidaoNascimento" class="form-label">Cert. de Nasc.</label>
+                  <input type="text" id="modal_certidaoNascimento" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="modal_carteiraTrabalho" class="form-label">Cart. de Trab.</label>
+                  <input type="text" id="modal_carteiraTrabalho" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="modal_carteiramotorista" class="form-label">Cart. de Motorista</label>
+                  <input type="text" id="modal_carteiramotorista" class="form-control">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!--Fim Modal -->
+        <div class="filter-space">
+          <input type="text" placeholder="Procurar">
+          <div class="filter-actions">
+            <a href="newEmployee.html">Novo</a>
+            <button id="filterButtom">Filtros</button>
+          </div>
+
+        </div>
+        <div id="showFilters-space">
+
+          <div class="showFilters-actions">
+
+            <select name="f-departamento" id="f-departamento">
+              <option value="">Departamento</option>
+              <option value="departamentoUm">Departamento 01</option>
+              <option value="departamentoDois">Departamento 02</option>
+            </select>
+
+            <select name="f-dataAdmissao" id="f-dataAdmissao">
+              <option value="">Ano Admissão</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+            </select>
+          </div>
+          <div>
+            <button>Aplicar</button>
+            <button>Limpar</button>
+          </div>
+        </div>
+        <div class="table-space">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Foto</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">Departamento</th>
+
+                <th scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                  <td>João Silva</td>
+                  <td>1</td>
+                  <td>(11) 98765-4321</td>
+                  <td>Desenvolvedor</td>
+                  <td>01/03/2020</td>
+                  <td>
+                    <a href="seeEmployee.html" class="actions"><img src="./img/see_black.png" alt="ver"></a>
+                    <a href="editEmployee.html" class="actions"><img src="./img/edit_black.png" alt="editar"></a>
+                    <a href="deleteEmployee.html" class="actions"><img src="./img/delete_black.png" alt="excluir"></a>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Ana Souza</td>
+                  <td>2</td>
+                  <td>(11) 99876-5432</td>
+                  <td>Analista de Sistemas</td>
+                  <td>15/07/2018</td>
+                  <td>
+                    <a href="seeEmployee.html" class="actions"><img src="./img/see_black.png" alt="ver"></a>
+                    <a href="editEmployee.html" class="actions"><img src="./img/edit_black.png" alt="editar"></a>
+                    <a href="deleteEmployee.html" class="actions"><img src="./img/delete_black.png" alt="excluir"></a>
+                  </td>
+                </tr> -->
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="flex-space"></div>
+
+        <div id="resultsSpace">
+          <div class="results amount">
+            <p>Resultados por página</p>
+            <div>
+              <select name="qtdeResults" id="qtdeResults">
+                <option value="5">5</option>
+                <option value="5">10</option>
+                <option value="5">15</option>
+              </select>
+            </div>
+          </div>
+          <div class="results">
+
+            <p>Mostrando 5 de 10 resultados</p>
+          </div>
+          <div class="results next">
+            <a href="#"><img src="./img/back.png" alt="anterior"></a>
+            <a href="#" class="numbers">1</a>
+            <a href="#" class="numbers">2</a>
+            <a href="#"><img src="./img/next.png" alt="proxima"></a>
+          </div>
+
+        </div>
+
+        <!-- fim do conteudo principal-->
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div>
+      <p>Sistema Rh TopRh nenhum direito reservado</p>
+    </div>
+  </footer>
+  <!-- no momento não precisa do modal separado(foi implementado direto no botão), deixando para possíveis usos -->
+  <script type="text/javascript" src="./js/modal.js" defer></script>
+  <script type="text/javascript" src="./js/script.js" defer></script>
+  <script type="text/javascript" src="./js/employees.js" defer></script>
+
+</body>
+
+</html>

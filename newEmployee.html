@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <link rel="stylesheet" href="./css/newEmployee.css" />
+
+  <!-- <script type="text/javascript" src="./js/script.js" defer></script>  DESATIVADO PARA NÂO PRECISAR SE LOGAR, LEMBRE DE DESCOMENTAR-->
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+
+  <title>Sistema RH TopRH-Novo Colaborador</title>
+</head>
+
+<body>
+  <nav>
+    <div id="conteinerLeft">
+      <a href="#">
+        <div id="hide">
+          <img src="./img/menu_white.png" alt="logo" id="showlateral" onclick="toggleSidebar()" />
+        </div>
+      </a>
+      <a href="">
+        <img src="./img/logo.png" alt="logo" id="logo" />
+      </a>
+    </div>
+    <div id="conteinerRight">
+      <!-- <div id="searchContainer">
+          <input id="search" type="text" placeholder="Pesquisar..." />
+        </div>
+         -->
+      <a href="#">
+        <div id="modesContainer">
+          <img src="./img/moon_white.png" alt="mode" />
+        </div>
+      </a>
+      <a href="#">
+        <div id="notifContainer">
+          <img src="./img/notification_white.png" alt="notification" />
+        </div>
+      </a>
+      <a href="#" id="userContainerLink">
+        <div id="userContainer" onclick="menuToggle()">
+          <img src="./img/user_white.png" alt="userimage" />
+        </div>
+        <div id="userMenu">
+          <h3>Nome do usuario<br /><span>Cargo</span></h3>
+          <ul>
+            <li>
+              <a href="#">
+                <div>
+                  <img src="./img/user_black.png" alt="usericon" />Perfil
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <div>
+                  <img src="./img/out_black.png" alt="logouticon" />Sair
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </a>
+    </div>
+  </nav>
+  <aside id="sidebar">
+    <div class="lateral">
+      <div id="lateralTop">
+        <a href="Home.html" class="navegation">
+          <div id="navegationMain">
+            <img src="./img/board_black.png" alt="board" />Página Inicial
+          </div>
+        </a>
+        <a href="employees.html" class="navegation">
+          <div id="navegationEmployee">
+            <img src="./img/emplo_black.png" alt="employee" />Colaboradores
+          </div>
+        </a>
+        <a href="pointManagement.html" class="navegation">
+          <div id="navegationPonto">
+            <img src="./img/ponto_black.png" alt="ponto" />Gestão de Ponto
+          </div>
+        </a>
+        <a href="./benefits.html" class="navegation">
+          <div id="navegationBenefits">
+            <img src="./img/benefit_back.png" alt="benefits" />Gestão de
+            Benefícios
+          </div>
+        </a>
+        <a href="payroll.html" class="navegation">
+          <div id="navegationPayment">
+            <img src="./img/pay_black.png" alt="payment" />Folha de pagamento
+          </div>
+        </a>
+      </div>
+      <div id="lateralbotton">
+        <a href="#" class="navegation">
+          <div id="navegationConfig">
+            <img src="./img/config_black.png" alt="config icon" />Configurações
+          </div>
+        </a>
+        <a href="#" class="navegation">
+          <div id="navegationSuport">
+            <img src="./img/suport_black.png" alt="suport icon" />Suporte
+          </div>
+        </a>
+        <a href="about.html" class="navegation">
+          <div id="navegationAbout">
+            <img src="./img/about_black.png" alt="about icon" />Sobre
+          </div>
+        </a>
+      </div>
+    </div>
+  </aside>
+  <main>
+    <div class="main">
+      <section id="title-navegation">
+        <h3 id="title-h3">Novo Colaborador</h3>
+        <a id="breadcrumbs1" href="employees.html">Colaboradores</a> &gt;
+        <a id="breadcrumbs2" href="#">Novo Colaborador</a>
+      </section>
+      <section id="mainContent">
+        <!-- inicio do conteudo principal -->
+
+        <div class="form-space">
+          <div class="tabs">
+            <div class="tab active" onclick="showTab(0)">
+              Informações Pessoais
+            </div>
+            <div class="tab" onclick="showTab(1)">
+              Informações Profissionais
+            </div>
+            <div class="tab" onclick="showTab(2)">Documentos</div>
+          </div>
+
+          <form id="cadastroForm">
+            <!-- Conteúdo das Abas -->
+
+            <!-- Informações Pessoais -->
+            <div id="tab-0" class="tab-content active">
+
+              <div>
+                <div id="imagemPreview"> </div>
+
+                <label id="uploadFoto" for="foto">
+                  Escolher
+                </label>
+
+                <input type="file" name="foto" id="foto" accept="image/*" />
+                <input placeholder="Nome" type="text" name="nome" id="nome" placeholder="Nome" required /><br />
+                <input type="text" placeholder="Data de Nascimento" id="dataNascimento" name="dataNascimento"
+                  onfocus="(this.type='date')" /><br />
+                <input placeholder="Telefone" type="tel" name="telefone" id="telefone" required /><br />
+                <input placeholder="E-mail" type="email" name="email" id="email" required /><br />
+
+                <select name="estadoCivil" id="estadoCivil">
+                  <option value="">Estado Civil</option>
+                  <option value="solteiro">Solteiro</option>
+                  <option value="casado">Casado</option>
+                </select><br />
+
+                <select name="sexo" id="sexo">
+                  <option value="">Sexo</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="femininoo">Feminino</option>
+                </select><br />
+              </div>
+
+              <div>
+
+                <input placeholder="Cep" type="text" name="cep" id="cep" /><br />
+                <input placeholder="Endereço" type="text" name="endereco" id="endereco" /><br />
+                <input placeholder="Bairro" type="text" name="bairro" id="bairro" /><br />
+                <input placeholder="Cidade" type="text" name="cidade" id="cidade" /><br />
+                <input placeholder="Estado" type="text" name="estado" id="estado" /><br />
+                <input placeholder="Pais" type="text" name="pais" id="pais" /><br />
+              </div>
+            </div>
+
+            <!-- Informações Profissionais -->
+            <div id="tab-1" class="tab-content">
+              <div>
+                <input disabled placeholder="ID Funcionário" type="text" name="id" id="id" required /><br />
+                <input placeholder="Nome do Usuário" type="text" name="usuario" id="usuario" required /><br />
+                <input placeholder="Departamento" type="text" name="departamento" id="departamento" required /><br />
+              </div>
+              <div>
+                <input placeholder="Email Corporativo" type="emailCorp" name="emailCorp" id="emailCorp"
+                  required /><br />
+
+                <select name="ativo" id="ativo">
+                  <option value="">Funcionário Ativo</option>
+                  <option value="sim">Sim</option>
+                  <option value="não">Não</option>
+                </select><br />
+
+                <input type="text" placeholder="Data de Admissão" id="dataAdmissao" name="dataAdmissao"
+                  onfocus="(this.type='date')" /><br />
+
+              </div>
+
+            </div>
+
+            <!-- Documentos -->
+            <div id="tab-2" class="tab-content">
+
+              <div id="doc">
+                <div>
+                  <input placeholder="Número Identidade" type="text" id="numeroIdentidade" name="numeroIdentidade"
+                    required /><br />
+                  <input placeholder="Número CPF" type="text" name="numeroCpf" id="numeroCpf" required /><br />
+                </div>
+
+                <div id="envDocContainer">
+                  <div class="envDoc">
+                    <label for="identidade">Enviar Identidade</label>
+                    <input type="file" id="identidade" name="identidade">
+                    <p id="file-name-id"></p>
+                  </div>
+
+                  <div class="envDoc">
+                    <label for="cpf">Enviar CPF</label>
+                    <input type="file" id="cpf" name="cpf">
+                    <p id="file-name-cpf"></p>
+                  </div>
+
+                  <div class="envDoc">
+                    <label for="comprovanteResidencia">Enviar Comprovante de Residência</label>
+                    <input type="file" id="comprovanteResidencia" name="comprovanteResidencia">
+                    <p id="file-name-residencia"></p>
+                  </div>
+
+                  <div class="envDoc">
+                    <label for="certidaoNascimento">Enviar Certidão de Nascimento</label>
+                    <input type="file" id="certidaoNascimento" name="certidaoNascimento">
+                    <p id="file-name-nascimento"></p>
+                  </div>
+
+                  <div class="envDoc">
+                    <label for="cateiraTrabalho">Enviar Carteira de Trabalho</label>
+                    <input type="file" id="cateiraTrabalho" name="cateiraTrabalho">
+                    <p id="file-name-trabalho"></p>
+                  </div>
+
+                  <div class="envDoc">
+                    <label for="carteiramotorista">Enviar Carteira de Motorista</label>
+                    <input type="file" id="carteiramotorista" name="carteiramotorista">
+                    <p id="file-name-motorista"></p>
+                  </div>
+
+
+                </div>
+
+
+
+              </div>
+
+            </div>
+
+            <!-- Alertas -->
+            <div id="alertas">
+              <p id="textAlertas"></p>
+            </div>
+            <!-- Botões de Navegação -->
+            <div class="buttons">
+              <button type="button" id="btnAnterior" onclick="mudarAba(-1)" disabled>
+                Anterior
+              </button>
+              <button type="button" id="btnProximo" onclick="mudarAba(1)">
+                Próximo
+              </button>
+              <button type="submit" id="btnSalvar" style="display: none" onclick="validar()">
+                Salvar
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div id="previous-next"></div>
+
+        <!-- fim do conteudo principal-->
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div>
+      <p>Sistema Rh TopRh nenhum direito reservado</p>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="./js/script.js" defer></script>
+  <script type="text/javascript" src="./js/newEmployee.js" defer></script>
+</body>
+
+</html>

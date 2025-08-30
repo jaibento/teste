@@ -1,0 +1,24 @@
+{
+  "name": "sprint-2-projeto-integrado-iii",
+  "version": "1.0.0",
+  
+  "description": "Implementação de algumas páginas web utilizando HTLM, CSS e JAVASCRIPT da disciplina de Projeto Integrado do curso de Análise e Desenvolvimento de Sistemas da UFCA, seguindo as práticas aprendidas a respeito de layout, acessibilidade e responssividade",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lal28/Sprint-2-Projeto-Integrado-III.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lal28/Sprint-2-Projeto-Integrado-III/issues"
+  },
+  "homepage": "https://github.com/lal28/Sprint-2-Projeto-Integrado-III#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.1.0",
+    "eslint": "^9.32.0"
+  }
+}

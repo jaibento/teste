@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style_login.css">
+    <link rel="stylesheet" href="./css/signUp.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Cadastrar</title>
+</head>
+
+<body>
+    <section class="container1">
+        <section class="box-form">
+            <h2>Cadastre-se agora mesmo</h2>
+
+            <div id="liveAlertPlaceholder"></div>
+
+            <form action="" class="form" id="formulario">
+                <input type="text" id="nome" placeholder="Nome:" class="inputs" required>
+                <input type="email" id="email" placeholder="E-mail:" class="inputs" required>
+                <span id="feedBackEmail" class="feedback">Esse email já está cadastrado, verifique seu email e tente
+                    novamente</span>
+                <input type="password" id="password" placeholder="Senha:" class="inputs" required>
+                <span id="feedback" class="feedback">A senha não pode ser menor que 6 digitos</span>
+                <input type="password" id="repassword" placeholder="Confirmar Senha:" class="inputs" required>
+                <span id="feedBackRepassword" class="feedback">As senhas não coincidem.</span>
+
+                <input type="submit" value="Cadastrar" class="button">
+                <a class="forgot-password mobile-only a-color " href="./login.html">
+                    <p class="p-ir-para-cadastrar">Já possui conta? </p>
+                    Faça seu Login
+                </a>
+            </form>
+        </section>
+        <section class="box-infos">
+            <img src="./img/logo.png" alt="Logo top Rh" id="logo_top_rh">
+            <p>Portal exclusivo para a gestão estratégica dos talentos da sua empresa</p>
+            <span class="ja-tenho-uma-conta">Já tenho uma conta</span>
+            <button class="button-entrar" onclick=" ir_para_login()">Entrar</button>
+        </section>
+    </section>
+        <script src="./js/signUp.js"></script>
+</body>
+
+</html>
